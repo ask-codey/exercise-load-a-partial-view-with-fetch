@@ -1,0 +1,39 @@
+@model List<Book>
+@{
+    ViewData["Title"] = "Books";
+    int page = (int)ViewData["Page"]!;
+    int pageCount = (int)ViewData["PageCount"]!;
+    List<Book> recentlyViewed = (List<Book>)ViewData["RecentlyViewed"]!;
+}
+
+<h1 class="mb-3">Books</h1>
+
+@if (recentlyViewed.Count > 0)
+{
+    <p class="text-body-secondary">Recently viewed:
+        @foreach (Book book in recentlyViewed)
+        {
+            <a class="me-2" asp-action="Details" asp-route-id="@book.BookId">@book.Title</a>
+        }
+    </p>
+}
+
+<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3">
+    @foreach (Book book in Model)
+    {
+        <div class="col">
+            <partial name="_BookCard" model="book" />
+        </div>
+    }
+</div>
+
+<nav aria-label="Book pages" class="mt-4">
+    <ul class="pagination flex-wrap">
+        @for (int i = 1; i <= pageCount; i++)
+        {
+            <li class="page-item @(i == page ? "active" : "")">
+                <a class="page-link" asp-action="Index" asp-route-page="@i">@i</a>
+            </li>
+        }
+    </ul>
+</nav>

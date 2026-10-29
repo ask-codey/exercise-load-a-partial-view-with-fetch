@@ -1,0 +1,12 @@
+@model Book
+
+<div class="card h-100">
+    <div class="card-body">
+        <h2 class="h5 card-title">@Model.Title</h2>
+        <p class="card-text text-body-secondary">@Model.PublishDate.ToString("MMMM yyyy")</p>
+        <p class="card-text fs-5">@Model.Price?.ToString("C")</p>
+    </div>
+    <div class="card-footer bg-transparent border-0">
+        <a class="btn btn-outline-primary btn-sm" asp-controller="Books" asp-action="Details" asp-route-id="@Model.BookId">Details</a>
+    </div>
+</div>
