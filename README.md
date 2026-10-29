@@ -39,3 +39,7 @@ Run the tests with **Test > Run All Tests**. Then run the app, open the Search p
 - The `input` event fires on every change to a text box.
 - `` `/books/search/results?q=${encodeURIComponent(text)}` `` builds a safe address for any text.
 - `response.text()` reads the partial's HTML; `innerHTML` puts it in the page.
+
+## Hand it in
+
+When it works, push your solution to a public repo of your own on GitHub, then paste that repo's address into **Submit your exercise** on the lesson page at [ask-codey.com](https://www.ask-codey.com). That's what completes the lesson. The lesson page shows the Git commands, step by step.
