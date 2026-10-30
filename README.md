@@ -1,10 +1,10 @@
-# Practice: Load a Partial View with fetch
+# Exercise: Load a Partial View with fetch
 
-Practice code for the lesson **Practice: Load a Partial View with fetch** in the C# Full-Stack Bootcamp on [ask-codey.com](https://www.ask-codey.com).
+Exercise code for the lesson **Exercise: Load a Partial View with fetch** in the C# Full-Stack Bootcamp on [ask-codey.com](https://www.ask-codey.com).
 
 BooksPlus's search page makes you type, then press **Search**, then wait for a whole new page. You'll make it search as you type: the results below the box change with every letter, and the page never reloads.
 
-This is the BooksPlus app from *Practice: MVC with Dapper*, finished.
+This is the BooksPlus app from *Exercise: MVC with Dapper*, finished.
 
 ## What's here
 
